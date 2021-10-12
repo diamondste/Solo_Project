@@ -40,7 +40,7 @@ const Login = (props) => {
                 <div className="min-h-screen w-1/2 bg-cover" style={{backgroundImage: `url(${img})`}}></div>
                     <div className="bg-white min-h-screen w-1/2 flex justify-center items-center">
                         <div>
-                            <p className="error-text">{errors ? errors: ""}</p>
+                            <span>{errors ? errors: ""}</span>
                             <form onSubmit={login}>
                                 <div>
                                     <span className="text-sm text-gray-900">Let's get to watching!</span>

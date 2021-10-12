@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 import img from '../img/mylogo.png';
-import { Link } from '@reach/router';
+import { Link, navigate } from '@reach/router';
 
 const Register = props => {
     const [confirm, setConfirm] = useState("");
@@ -44,6 +44,7 @@ const Register = props => {
             })
             setConfirm("Thank you for Registering, you can now log in!");
             setErrors({});
+            navigate('/login')
         })
         .catch((err) => {
             console.log(err);

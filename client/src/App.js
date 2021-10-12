@@ -15,7 +15,7 @@ function App() {
       <Router>
         <Register path="/" />
         <Login setReloadBoolean={setReloadBoolean} reloadBoolean={reloadBoolean} path="/login" />
-        <Dashboard path="/movie"/>
+        <Dashboard  path="/movie"/>
         <CreateMovie path="/movie/new"/>
         <UserProfile path="/user/profile/:id"/>
         <MovieDetails path="/movie/:id" />
