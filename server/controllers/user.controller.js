@@ -60,8 +60,8 @@ module.exports =  {
                         }
                     })
 
-                    .catch((error)=>{
-                        console.log(error);
+                    .catch((err)=>{
+                        console.log(err);
                         res.status(400).json({message: "Invaild Attempt"});
                     })
                 }
