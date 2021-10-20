@@ -10,7 +10,7 @@ const [userPage, setUserPage] = useState({});
 const {id} = props;
 
 useEffect(()=>{
-    axios.get(`http://localhost:8000/api/movies/user/${id}`)
+    axios.get(`http://localhost:8000/api/movies/user/${id}`, {withCredentials: true})
     .then((res)=>{
         console.log(res.data);
         setUserMovie(res.data);
@@ -21,7 +21,7 @@ useEffect(()=>{
 }, [])
 
 useEffect(()=>{
-    axios.get(`http://localhost:8000/api/users/${id}`)
+    axios.get(`http://localhost:8000/api/users/${id}`, {withCredentials: true})
     .then((res)=>{
         console.log(res.data);
         setUserPage(res.data);
