@@ -27,7 +27,8 @@
 
 <h1>View</h1>
 
-![image](https://user-images.githubusercontent.com/86845092/147964797-bf3de526-e597-484f-8b82-f9e59911fc9d.png)
+![image](https://user-images.githubusercontent.com/86845092/161869784-914e7de6-1f7c-4e35-b69d-7299f1902586.png)
+)
 
 <h1>Profile</h1>
 
