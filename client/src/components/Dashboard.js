@@ -3,18 +3,23 @@ import axios from 'axios';
 import { Link} from '@reach/router';
 import Header from './Header';
 
-const Dashboard = (props)=> {
+
+const Dashboard = props => {
     const [showList, setShowList] = useState([]);
 
+
     useEffect(()=> { 
-        axios.get('http://localhost:8000/api/movies')
+        axios.get('https://api.themoviedb.org/3/movie/now_playing?api_key=91a9962ed3961f151255c52b3ebc0775&language=en-US&page=2')
         .then((res)=>{
-            setShowList(res.data);
+            setShowList(res.data.results);
         })
         .catch((err)=>{
             console.log(err);
         })
     },[])
+
+    const getImage = (path) => `https://image.tmdb.org/t/p/w300${path}`;
+    
 
     const [reloadBoolean, setReloadBoolean] = useState(false);
     
@@ -22,14 +27,16 @@ const Dashboard = (props)=> {
         <div>
             <Header setReloadBoolean={setReloadBoolean} reloadBoolean={reloadBoolean}/>
             <br />
+            
+            <h1 class="font-medium leading-tight text-5xl mt-0 mb-2 text-black-600">Now Playing</h1>
+
             {
-                showList.map((show, index)=>(
+                showList.length > 0 && showList.map((show, index)=>(
                     <div key={index} style={{display: "inline-block",
-                    margin: "10px",
-                    height: '200px',
-                    width:"200px"}}>
-                    <Link to={`/movie/${show._id}`}>
-                        <img src={show.image} alt={show.title}/>
+                    margin: "30px",
+                    height: '500px' }}>
+                    <Link to={`/movie/${show.id}`}>
+                        <img src = {getImage(show.poster_path)}/>
                     </Link>
                     </div>
                 ))

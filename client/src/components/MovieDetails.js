@@ -2,12 +2,12 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import Header from './Header';
 
-const MovieDetails = (props)=> { 
+const MovieDetails = props => { 
 
     const [MovieDetails , setMovieDetails] = useState({});
 
     useEffect(()=>{
-        axios.get(`http://localhost:8000/api/movies/${props.id}`)
+        axios.get(`https://api.themoviedb.org/3/movie/${props.id}?api_key=91a9962ed3961f151255c52b3ebc0775&language=en-US`)
         .then((res)=>{
             setMovieDetails(res.data);
         })
@@ -16,17 +16,20 @@ const MovieDetails = (props)=> {
         })
     }, []);
 
+    const getImage = (path) => `https://image.tmdb.org/t/p/w300${path}`;
+
     return(
 
         <div style={{textAlign:"center"}}>
             <Header />
-            <img src={MovieDetails.image} style={{height: '300px', width:"200px", marginLeft: "auto", marginRight: "auto"}} alt={MovieDetails.title} />
+            <br />
+            <img src={getImage(MovieDetails.poster_path)} style={{height: '300px', width:"200px", marginLeft: "auto", marginRight: "auto"}} alt={MovieDetails.title} />
             <p>Title: {MovieDetails.title} </p>
-            <p>Type: {MovieDetails.type} </p>
-            <p>Genre: {MovieDetails.genre} </p>
-            <p>Year: {MovieDetails.year} </p>
-            <p>Rating: {MovieDetails.rating} </p>
-            <p>Summary: {MovieDetails.summary}</p>
+            <p>Runtime: {MovieDetails.runtime} minutes </p>
+            <p>Release Date: {MovieDetails.release_date} </p>
+            <p>Rating: {MovieDetails.vote_average} </p>
+            <p>Summary: {MovieDetails.overview}</p>
+    
         </div>
     )
 

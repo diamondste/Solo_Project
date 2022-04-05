@@ -15,6 +15,8 @@ const CreateMovie = (props)=>{
         rating: ""
     })
 
+    
+
     const handleChange = (e) => {
         setNewMovie({
             ...newMovie,

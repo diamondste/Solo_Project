@@ -3,9 +3,11 @@ import {Router} from '@reach/router';
 import Login from './components/Login';
 import Register from './components/Register';
 import Dashboard from './components/Dashboard';
-import CreateMovie from './components/CreateMovie';
+//import CreateMovie from './components/CreateMovie';
 import UserProfile from './components/UserProfile';
 import MovieDetails from './components/MovieDetails';
+//<CreateMovie path="/movie/new"/>
+
 function App() {
 
   const [reloadBoolean, setReloadBoolean] = useState(false);
@@ -16,7 +18,6 @@ function App() {
         <Register path="/" />
         <Login setReloadBoolean={setReloadBoolean} reloadBoolean={reloadBoolean} path="/login" />
         <Dashboard  path="/movie"/>
-        <CreateMovie path="/movie/new"/>
         <UserProfile path="/user/profile/:id"/>
         <MovieDetails path="/movie/:id" />
       </Router>

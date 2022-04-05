@@ -64,7 +64,7 @@ return(
             </dl>
             </div>
         </div>
-        <div className="px-4 py-5 sm:px-6" style={{textAlign:"center"}}>
+        {/* <div className="px-4 py-5 sm:px-6" style={{textAlign:"center"}}>
                 <h3 className="text-lg leading-6 font-medium text-gray-900">
                     {userPage.firstName}'s Recommends
                 </h3>
@@ -80,7 +80,7 @@ return(
                 </Link>
                 </div>
             ))
-        }
+        } */}
     </div>
 )
 
