@@ -23,7 +23,7 @@
 
 <h1>Dashboard</h1>
 
-![image](https://user-images.githubusercontent.com/86845092/147964471-90624194-3a96-4728-be05-6a98947e5f31.png)
+![dashboard](https://user-images.githubusercontent.com/86845092/161869650-8ba56ead-c708-4316-8980-3da04587fd43.PNG)
 
 <h1>View</h1>
 
