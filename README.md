@@ -31,4 +31,4 @@
 
 <h1>Profile</h1>
 
-![image](https://user-images.githubusercontent.com/86845092/147965290-6e6c34c2-fac8-4574-88b6-974b1871ebff.png)
+![image](https://user-images.githubusercontent.com/86845092/161870366-3e8634c3-9e3b-4273-bd07-b8690a5dacbb.png)
