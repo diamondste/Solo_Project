@@ -26,6 +26,7 @@
 ![dashboard](https://user-images.githubusercontent.com/86845092/161869650-8ba56ead-c708-4316-8980-3da04587fd43.PNG)
 
 <h1>View</h1>
+
 ![view](https://user-images.githubusercontent.com/86845092/161870092-c560fe5f-b342-4c18-ad7e-035af0c31ccf.PNG)
 
 <h1>Profile</h1>
